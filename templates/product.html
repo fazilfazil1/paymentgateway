@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px; display: flex;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  display: flex;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+</style>
+<body>
+
+<h2>Product page is here!</h2>
+
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBqhhdKsS4m4qlM6NytrnR0M0DEGtVoeQCcg&usqp=CAU" alt="Denim Jeans" style="width:100%">
+        <h1>Bag</h1>
+        <p class="price">$19.99</p>
+        <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+        <a href="/checkout">Add to Cart</a>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI2TDVUra1n_mu0C4S6D2DBSI3LR_bzDInsg&usqp=CAU" alt="Denim Jeans" style="width:100%">
+        <h1>Shoes</h1>
+        <p class="price">$21.99</p>
+        <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+        <a href="/checkout">Add to Cart</a>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQe-_LdrZuk52bulyh58vbafHhJrFId5jR5w&usqp=CAU" alt="Denim Jeans" style="width:100%">
+        <h1>Iphone</h1>
+        <p class="price">$49.99</p>
+        <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+        <a href="/checkout">Add to Cart</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+
+{% endblock %}
