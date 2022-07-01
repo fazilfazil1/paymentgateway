@@ -1,11 +1,11 @@
 # initiate - merchant process a detailed post request to payweb
 # Response payrequestid and checksum
 import json
-
+#initiate and get response as payrequest id
 import requests
 
 url = "https://secure.paygate.co.za/payweb3/initiate.trans"
-
+ 
 payload = {
     "PAYGATE_ID": "10011072130",
     "REFERENCE": "secret",
