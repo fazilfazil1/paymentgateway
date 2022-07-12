@@ -7,8 +7,8 @@ import requests
 url = "https://secure.paygate.co.za/payweb3/initiate.trans"
  
 payload = {
-    "PAYGATE_ID": "10011072130",
-    "REFERENCE": "secret",
+    "PAYGATE_ID": "10011072130",  
+    "REFERENCE": "",
     "AMOUNT": "3299",
     "CURRENCY": "IND",
     "RETURN_URL": "https://www.bigcommerce.com/",
@@ -23,11 +23,9 @@ payload = {
 }
 
 
-
 headers = {
     "Content-Type": "application/x-www-form-urlencoded"
 }
 
 response = requests.request("POST", url, json=payload, headers=headers)
-
 print(response.text)
